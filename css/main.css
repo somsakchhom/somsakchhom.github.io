@@ -1,0 +1,97 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.header {
+  border-bottom: 5px solid #7d97ad;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+img {
+  max-width: 100%
+}
+
+a {
+  text-decoration: none;
+}
+.feature-work {
+  margin-top: 20px;
+  text-align: center;
+}
+.project-item {
+  margin: 20px 20px;
+}
+.project-image {
+  align-self: center;
+  max-height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 15px;
+    max-width: 1300px;
+  }
+  .header-logo {
+    text-align: left;
+    margin-left: 10px;
+
+  }
+  .header-inner {
+    text-align: right;
+    margin-right: 10px;
+  }
+  .container-middle {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  .feature-work {
+
+  }
+  .feature-work h2 {
+    text-align: left;
+    margin-left: 20px;
+  }
+  .featured-projects {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  .project-item {
+    flex: 1;
+    width: 30%;
+    height: 200px;
+  }
+  .project-image {
+    height: 200px;
+    object-fit: cover;
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hero-image {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .feature-work h2 {
+    margin-left: 60px;
+    text-align: left;
+  }
+}
