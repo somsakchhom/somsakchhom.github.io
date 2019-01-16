@@ -1,27 +1,46 @@
 // Select color input
-// Select size input
+// console.log("Heyyyy");
+// console.log($("#colorPicker").val());
 
-// When size is submitted by the user, call makeGrid()
-// make grid
+// Select size input
+// console.log($(inputHeight).val());
+// console.log($(inputWidth).val());
+
+// Select submit button using JQuery
+// $("#sizePicker").submit(function(event) {
+//   console.log("oh me, oh my");
+//   event.preventDefault();
+// });
+
+// Select submit using JS
+// var gridInput = document.getElementById('sizePicker');
+// gridInput.val(function());
+
+
+//When size is submitted by the user, call makeGrid()
 function makeGrid() {
 
   // gridHeight
-  const gridHeight = 5;
+  const gridHeight = 10;
 
   // gridWidth
-  const gridWidth = 5;
+  const gridWidth = 20;
 
-  // for each number up to gridHeight
-  for (let row = 0; row < gridHeight; row++) {
-
-    // add row to table element
-    console.log('adding row to table');
-
-    // for each number up to gridWidth
-    for (let td = 0; td < gridWidth; td++) {
-
-      // add td to row element
-      console.log('adding td to row');
+  // select tbody element
+  const testTable = document.querySelector('tbody'); //try 'table' next
+  testTable.innerHTML = '';
+  
+  // Create and insert gridHeight
+  for (let i = 0; i < gridHeight; i++) {
+    const tableRows = document.createElement('tr');
+    testTable.appendChild(tableRows);
+  
+  // Create and insert gridWidth 
+    for (let j = 0; j < gridWidth; j++) {
+      const tableColumns = document.createElement('td');
+      tableRows.appendChild(tableColumns);
     }
   }
 }
+
+makeGrid();
