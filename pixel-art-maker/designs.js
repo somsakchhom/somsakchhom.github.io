@@ -1,10 +1,3 @@
-// Select color input
-// console.log("Heyyyy");
-// console.log($("#colorPicker").val());
-
-// Select size input
-// console.log($(inputHeight).val());
-// console.log($(inputWidth).val());
 
 // Creates grid
 function makeGrid() {
@@ -16,13 +9,13 @@ function makeGrid() {
   const gridWidth = document.getElementById('inputWidth').value;
 
   // select tbody element
-  const testTable = document.querySelector('tbody'); //try 'table' next
-  testTable.innerHTML = '';
+  const gridTable = document.querySelector('tbody');
+  gridTable.innerHTML = '';
   
   // Create and insert gridHeight
   for (let i = 0; i < gridHeight; i++) {
     const tableRows = document.createElement('tr');
-    testTable.appendChild(tableRows);
+    gridTable.appendChild(tableRows);
   
   // Create and insert gridWidth 
     for (let j = 0; j < gridWidth; j++) {
@@ -39,14 +32,9 @@ selectButton.addEventListener('submit', function (event) {
   event.preventDefault();
 });
 
-// Accept input values for gridHeight and gridWidth
-
-// Select input for gridHeight
-// function inputValue () {
-// const selectGridHeight = document.getElementById('inputHeight').value;
-// const selectGridWidth = document.getElementById('inputWidth').value;
-// console.log(selectGridHeight, selectGridWidth);
-// }
-// Select input for gridWidth
-
-
+// Pick color and use it to update cell when clicked
+const cell = document.getElementById('pixelCanvas');
+cell.addEventListener('click', function (event) {
+  const selectColor = colorPicker.value;
+  event.target.style.backgroundColor = selectColor;
+}); 
