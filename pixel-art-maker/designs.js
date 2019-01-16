@@ -12,12 +12,14 @@
 //   event.preventDefault();
 // });
 
-// Select submit using JS
-// var gridInput = document.getElementById('sizePicker');
-// gridInput.val(function());
+  // Select submit using JS
+  // var gridInput = document.getElementById('sizePicker');
+  // gridInput.val(function()
+  //   console.log('boom!!')
+  // );
 
 
-//When size is submitted by the user, call makeGrid()
+// Creates grid
 function makeGrid() {
 
   // gridHeight
@@ -43,4 +45,9 @@ function makeGrid() {
   }
 }
 
-makeGrid();
+// Select Submit button will display Grid
+const selectButton = document.getElementById('sizePicker');
+selectButton.addEventListener('click', function (event) {
+  makeGrid();
+  event.preventDefault();
+});
